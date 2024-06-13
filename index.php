@@ -28,18 +28,18 @@ $persons = [
     ]
 ];
 
-foreach ($persons as $person) {
-    if ($person['is_married']) {
-        echo 'женат: ' . $person['name'] . "\n";
-    } else {
-        echo 'не женат: ' . $person['name'] . "\n";
-    }
-}
+//foreach ($persons as $person) {
+//    if ($person['is_married']) {
+//        echo 'женат: ' . $person['name'] . "\n";
+//    } else {
+//        echo 'не женат: ' . $person['name'] . "\n";
+//    }
+//}
 
-$age = 0;
-$name = 'Boris';
+$flat = '20';
+$name = 'Gena';
 
-if ($name) {
+if ($flat == 20 && $flat === 20) {
     echo 'YES';
 } else {
     echo 'NO';
