@@ -8,17 +8,7 @@ $person = [
     'pet_name' => 'Barsik'
 ];
 
-print_r($person['name']);
-
-
-$secondPerson = [
-    'name' => 'Vasya',
-    'age' => 20
-];
-
-$secondPerson['hobby'] = 'swimming';
-print_r($secondPerson);
-
-unset($secondPerson['name']);
-
-print_r($secondPerson);
+foreach ($person as $key => $item) {
+    echo $key . ': ';
+    echo $item . "\n";
+}
