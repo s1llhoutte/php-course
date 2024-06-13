@@ -14,7 +14,7 @@ $persons = [
         'name' => 'Karl',
         'age' => 20,
         'hobby' => 'swimming',
-        'is_married' => true,
+        'is_married' => false,
         'pet' => 'cat',
         'pet_name' => 'Barsik'
     ],
@@ -22,12 +22,25 @@ $persons = [
         'name' => 'Margo',
         'age' => 18,
         'hobby' => 'swimming',
-        'is_married' => true,
+        'is_married' => false,
         'pet' => 'cat',
         'pet_name' => 'Barsik'
     ]
 ];
 
 foreach ($persons as $person) {
-    print_r($person['name']);
+    if ($person['is_married']) {
+        echo 'женат: ' . $person['name'] . "\n";
+    } else {
+        echo 'не женат: ' . $person['name'] . "\n";
+    }
+}
+
+$age = 0;
+$name = 'Boris';
+
+if ($name) {
+    echo 'YES';
+} else {
+    echo 'NO';
 }
