@@ -6,11 +6,11 @@ function sayHello() {
     echo $name;
 }
 
-sayHello();
-
-function sum($a, $b) {
+function getSum($a, $b) {
     $sum = $a + $b;
-    echo $sum;
+    echo 'Hello';
+    return $sum;
 }
 
-sum(15,10);
+$num = getSum(55,10);
+echo $num + 20;
