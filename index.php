@@ -8,9 +8,17 @@ class Person
 
     public $jpb = 'Developer';
 
+    public function __construct($name, $age, $jpb)
+    {
+        $this->name = $name;
+        $this->age = $age;
+        $this->jpb = $jpb;
+    }
+
     public function sayHello() {
         echo 'say Hello';
     }
+
 }
 
 class Developer extends Person
@@ -37,5 +45,8 @@ class Manager extends Person
     }
 }
 
-$manager = new Manager();
-$manager->sayHello();
+$manager = new Manager('maria', 20, 'manager');
+echo $manager->name;
+
+$director = new Director('Arkadii', 42, 'director');
+echo $director->jpb;
