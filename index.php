@@ -1,12 +1,10 @@
 <?php
 
-class Person
+abstract class Person
 {
-    public $name = 'Bob';
-
-    public $age = 20;
-
-    public $jpb = 'Developer';
+    public $name;
+    public $age;
+    public $jpb;
 
     public function __construct($name, $age, $jpb)
     {
@@ -14,46 +12,18 @@ class Person
         $this->age = $age;
         $this->jpb = $jpb;
     }
-
-    public function sayHello() {
-        echo 'say Hello';
-    }
-
 }
 
 class Developer extends Person
 {
-    public $timePerWeek ;
+    public $timePerWeek;
 
     public function __construct($name, $age, $jpb, $timePerWeek)
     {
-        parent::__construct($name, $age, $jpb);
         $this->timePerWeek = $timePerWeek;
-    }
-
-    public function work()
-    {
-        echo 'Developer is working';
-    }
-
-
-}
-
-class Director extends Person
-{
-    public function work()
-    {
-        echo 'director is working';
+        parent::__construct($name, $age, $jpb);
     }
 }
 
-class Manager extends Person
-{
-    public function work()
-    {
-        echo 'manager is working';
-    }
-}
-
-$developer = new Developer('John', 20, 'developer', '14');
+$developer = new Developer('Victor', 20, 'developer', '10');
 echo $developer->name;
