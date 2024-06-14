@@ -1,16 +1,16 @@
 <?php
 
-function sayHello() {
-    echo 'hello';
-    $name = 'Vasya';
-    echo $name;
+class Person {
+    public $name = 'Victor';
+
+    public $age = 20;
+
+    public $isMarried = true;
+
+    public function sayHello () {
+        echo 'Hello my friend\'s';
+    }
 }
 
-function getSum($a, $b) {
-    $sum = $a + $b;
-    echo 'Hello';
-    return $sum;
-}
-
-$num = getSum(55,10);
-echo $num + 20;
+$person = new Person();
+$person->sayHello();
