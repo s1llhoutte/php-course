@@ -1,29 +1,20 @@
 <?php
 
-abstract class Person
+class Person
 {
-    public $name;
-    public $age;
-    public $jpb;
-
-    public function __construct($name, $age, $jpb)
+    public static $name;
+    public static function sum($a, $b)
     {
-        $this->name = $name;
-        $this->age = $age;
-        $this->jpb = $jpb;
+        echo $a + $b;
+    }
+    public static function setName($name)
+    {
+        self::$name = $name;
     }
 }
 
-class Developer extends Person
-{
-    public $timePerWeek;
+Person::setName('Anton');
+echo Person::$name;
 
-    public function __construct($name, $age, $jpb, $timePerWeek)
-    {
-        $this->timePerWeek = $timePerWeek;
-        parent::__construct($name, $age, $jpb);
-    }
-}
-
-$developer = new Developer('Victor', 20, 'developer', '10');
-echo $developer->name;
+$person = new Person();
+echo Person::$name;
