@@ -1,20 +1,27 @@
 <?php
 
-class Person
+interface Sportsmen
 {
-    public static $name;
-    public static function sum($a, $b)
-    {
-        echo $a + $b;
-    }
-    public static function setName($name)
-    {
-        self::$name = $name;
-    }
+    public function run();
+    public function gym();
+    public function eat();
 }
 
-Person::setName('Anton');
-echo Person::$name;
+class Gymnast implements Sportsmen
+{
 
-$person = new Person();
-echo Person::$name;
+    public function run()
+    {
+        echo 'i\'m running';
+    }
+
+    public function gym()
+    {
+        echo 'i\'m gym';
+    }
+
+    public function eat()
+    {
+        echo 'i\' eat';
+    }
+}
