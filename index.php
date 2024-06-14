@@ -1,27 +1,33 @@
 <?php
 
-interface Sportsmen
+class Plant
 {
-    public function run();
-    public function gym();
-    public function eat();
+    public $title;
+    private $color;
+    protected $season;
+
+    public function __construct($title, $color, $season)
+    {
+        $this->title = $title;
+        $this->color = $color;
+        $this->season = $season;
+    }
+
+    private function someCalculation()
+    {
+    }
+
 }
 
-class Gymnast implements Sportsmen
+class Rose extends Plant
 {
-
-    public function run()
-    {
-        echo 'i\'m running';
-    }
-
-    public function gym()
-    {
-        echo 'i\'m gym';
-    }
-
-    public function eat()
-    {
-        echo 'i\' eat';
+    public function anotherCalc() {
+        $this->season = 'summer';
     }
 }
+
+$plant = new Plant('Tulpan', 'yellow', 'summer');
+
+
+$rosa = new Rose('rosa', 'red', 'spring');
+echo $rosa->title;
