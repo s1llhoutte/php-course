@@ -23,10 +23,20 @@ class Person
 
 class Developer extends Person
 {
+    public $timePerWeek ;
+
+    public function __construct($name, $age, $jpb, $timePerWeek)
+    {
+        parent::__construct($name, $age, $jpb);
+        $this->timePerWeek = $timePerWeek;
+    }
+
     public function work()
     {
         echo 'Developer is working';
     }
+
+
 }
 
 class Director extends Person
@@ -45,8 +55,5 @@ class Manager extends Person
     }
 }
 
-$manager = new Manager('maria', 20, 'manager');
-echo $manager->name;
-
-$director = new Director('Arkadii', 42, 'director');
-echo $director->jpb;
+$developer = new Developer('John', 20, 'developer', '14');
+echo $developer->name;
