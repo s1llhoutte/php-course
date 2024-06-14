@@ -1,16 +1,37 @@
 <?php
 
 class Person {
-    public $name = 'Victor';
+    public $name = 'Bob';
 
     public $age = 20;
 
-    public $isMarried = true;
+    public function setName($name) {
+        $this->name = $name;
+    }
 
-    public function sayHello () {
-        echo 'Hello my friend\'s';
+    public function setAge($age) {
+        $this->age = $age;
+    }
+
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    public function getAge()
+    {
+        return $this->age;
     }
 }
 
 $person = new Person();
-$person->sayHello();
+
+$person->setName('Vasya');
+echo $person->name;
+
+$person->setAge(21);
+echo $person->age;
+
+
+echo $person->getAge();
+echo $person->getName();
