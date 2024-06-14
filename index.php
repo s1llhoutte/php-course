@@ -1,23 +1,41 @@
 <?php
 
-class Person {
+class Person
+{
     public $name = 'Bob';
 
     public $age = 20;
 
-    public $hobby = 'swimming';
+    public $jpb = 'Developer';
 
-    public $isMarried = false;
-
-    public function __construct($name, $age, $hobby)
-    {
-        echo 'CONSTRUCTOR';
-        $this->name = $name;
-        $this->age = $age;
-        $this->hobby = $hobby;
+    public function sayHello() {
+        echo 'say Hello';
     }
-
 }
 
-$person = new Person('Victor', 21, 'swimming');
-echo $person->name;
+class Developer extends Person
+{
+    public function work()
+    {
+        echo 'Developer is working';
+    }
+}
+
+class Director extends Person
+{
+    public function work()
+    {
+        echo 'director is working';
+    }
+}
+
+class Manager extends Person
+{
+    public function work()
+    {
+        echo 'manager is working';
+    }
+}
+
+$manager = new Manager();
+$manager->sayHello();
