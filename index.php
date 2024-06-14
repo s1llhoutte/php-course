@@ -5,33 +5,19 @@ class Person {
 
     public $age = 20;
 
-    public function setName($name) {
+    public $hobby = 'swimming';
+
+    public $isMarried = false;
+
+    public function __construct($name, $age, $hobby)
+    {
+        echo 'CONSTRUCTOR';
         $this->name = $name;
-    }
-
-    public function setAge($age) {
         $this->age = $age;
+        $this->hobby = $hobby;
     }
 
-    public function getName()
-    {
-        return $this->name;
-    }
-
-    public function getAge()
-    {
-        return $this->age;
-    }
 }
 
-$person = new Person();
-
-$person->setName('Vasya');
+$person = new Person('Victor', 21, 'swimming');
 echo $person->name;
-
-$person->setAge(21);
-echo $person->age;
-
-
-echo $person->getAge();
-echo $person->getName();
